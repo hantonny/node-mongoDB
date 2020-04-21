@@ -1,12 +1,10 @@
 const express = require('express')
+const homeController = require('../controllers/homeController')
+const usersController = require('../controllers/usersController')
 const router = express.Router()
 
-router.get('/', (request, response) => {
-  const obj = {
-    'nome': 'Hantonny',
-    'idade': 24
-  }
-  response.render('home', obj)
-})
+router.get('/', homeController.userMiddleware, homeController.index)
+router.get('/users/login', usersController.login)
+router.get('/users/register', usersController.register)
 
 module.exports = router
