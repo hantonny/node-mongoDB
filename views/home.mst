@@ -1,0 +1,4 @@
+<h1>Seja bem vindo(a)</h1>
+<p>Qualquer mensagem</p>
+<p>Nome: {{nome}}</p>
+<p>Idade: {{idade}}</p>
