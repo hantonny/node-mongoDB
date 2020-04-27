@@ -1,7 +1,13 @@
-exports.index = (request, response) => {
-  const obj = {
+const mongoose = require('mongoose')
+const Post = mongoose.model('Post')
+
+exports.index = async (request, response) => {
+  const responseJson = {
     pagetitle: 'Home',
-    userInfo: request.userInfo
+    posts: []
   }
-  response.render('home', obj)
+  const posts = await Post.find()
+  responseJson.posts = posts
+
+  response.render('home', responseJson)
 }

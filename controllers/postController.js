@@ -6,9 +6,41 @@ exports.add = (requeste, response) => {
 }
 exports.addAction = async (request, response) => {
   const post = new Post(request.body)
-  await post.save()
+
+  try {
+    await post.save()
+  } catch (error) {
+    request.flash('error', 'Erro: ' + error.message)
+    return response.redirect('/post/add')
+  }
 
   request.flash('success', 'Post salvo com sucesso!')
+
+  response.redirect('/')
+}
+exports.edit = async (request, response) => {
+  const post = await Post.findOne({ slug: request.params.slug })
+
+  response.render('postEdit', { post })
+}
+exports.editAction = async (request, response) => {
+  request.body.slug = require('slug')(request.body.title,
+    { lower: true })
+
+  try {
+    await Post.findOneAndUpdate(
+      { slug: request.params.slug },
+      request.body,
+      {
+        new: true,
+        runValidators: true
+      })
+  } catch (error) {
+    request.flash('error', 'Erro: ' + error.message)
+    return response.redirect('/post/' + request.params.slug + '/edit')
+  }
+
+  request.flash('success', 'Post atualizado com sucesso!')
 
   response.redirect('/')
 }
