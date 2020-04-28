@@ -2,12 +2,15 @@
 <head>
   {{#pagetitle}}
   <title>{{pagetitle}} - {{h.defaultPagetitle}}</title>
+  
   {{/pagetitle}}
   {{^pagetitle}}
   <title>{{h.defaultPagetitle}}</title>
   {{/pagetitle}}
+  <link rel="stylesheet" href="/assets/css/template.css"/>
 </head>
 <body>
+<header>
 <h1>Cabeçalho</h1>
 <hr/>
 <ul>
@@ -17,19 +20,18 @@
 {{/h.menu}}
 
 </ul>
-<hr/>
-{{#flashes}}
+</header>
 
+{{#flashes}}
 {{#success}}
-  <div>{{.}}</div>
+<div class="warning">{{.}}</div>
 {{/success}}
 
 {{#error}}
-  <div>{{.}}</div>
+  <div class="warning">{{.}}</div>
 {{/error}}
 
 {{#info}}
-  <div>{{.}}</div>
+ <div class="warning">{{.}}</div>
 {{/info}}
-
 {{/flashes}}
