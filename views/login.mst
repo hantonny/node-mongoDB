@@ -5,6 +5,7 @@
   <input type="text" name="usuario">
   <input type="password" name="password">
   
-  <button>Entrar</button>
+  <input type="submit" value="Entrar">
+
 
 </form>

@@ -50,6 +50,7 @@ border-radius:5px;
 overflow:hidden;
 }
 .post img {
+height: 250px;
 max-width:100%;
 }
 form {
