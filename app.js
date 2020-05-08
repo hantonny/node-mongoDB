@@ -4,6 +4,8 @@ const mustache = require('mustache-express')
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
 const flash = require('express-flash')
+const passport = require('passport')
+const LocalStrategy = require('passport-local').Strategy
 const path = require('path')
 const helpers = require('./helpers')
 const errorHandlers = require('./handlers/errorHandlers')
@@ -28,6 +30,13 @@ app.use((request, response, next) => {
   response.locals.flashes = request.flash()
   next()
 })
+app.use(passport.initialize())
+app.use(passport.session())
+
+const User = require('./models/User')
+passport.use(new LocalStrategy(User.authenticate()))
+passport.serializeUser(User.serializeUser())
+passport.deserializeUser(User.deserializeUser())
 
 app.use('/', router)
 
