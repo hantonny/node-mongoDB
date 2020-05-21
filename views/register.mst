@@ -15,7 +15,7 @@
   <input type='password' name='password'>
  </labeL><br>
   <label>
-  <input type='submit' value='Cadastrar'>
+  <button type='submit' class="btn btn-success">CADASTRAR</button>
  </labeL><br>
 
 </form>

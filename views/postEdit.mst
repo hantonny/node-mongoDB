@@ -26,6 +26,6 @@
   </label>
   <br/>
   <label>
-    <input type="submit" value="Salvar">
+    <button type='submit' class="btn btn-success">SALVAR</button>
   </label>
 </form>

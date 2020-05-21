@@ -13,9 +13,14 @@ border-bottom:1px solid #CCC;
 header h1 {
 text-align:center;
 }
+h2{
+  text-align: center;
+  padding-top: 20px;
+}
 a {
 color:#000;
 text-decoration:none;
+font-size: 20px;
 }
 a:hover {
 text-decoration:underline;
@@ -39,13 +44,21 @@ background-color:#0000FF;
 color:#FFF;
 padding:10px 20px;
 border-radius:5px;
+margin: auto;
+margin-top: 20px;
+max-width: 500px;
+width: 100%;
+text-align: center;
+font-weight: bold;
 }
 .post {
-width:300px;
+width:100%;
+max-width: 300px;
 display:inline-block;
 box-shadow:0px 0px 5px #999;
 padding:10px;
-margin:20px;
+margin-top: 10px;
+margin-left: 120px;
 border-radius:5px;
 overflow:hidden;
 }
@@ -54,6 +67,10 @@ height: 250px;
 max-width:100%;
 }
 form {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 margin:20px;
 }
 label {

@@ -8,6 +8,8 @@ exports.index = async (request, response) => {
     tags: [],
     tag: ''
   }
+
+  console.log(request.user)
   responseJson.tag = request.query.t
   const postFilter = (typeof responseJson.tag !== 'undefined') ? { tags: responseJson.tag } : {}
 
