@@ -1,5 +1,5 @@
 {{> header}}
-
+<div class="view">
 <h1>{{post.title}}</h1>
 
 <article>{{post.body}}</article>
@@ -7,3 +7,4 @@
 <hr/>
 
 <small>{{post.tags}}</small>
+</div>

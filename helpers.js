@@ -1,4 +1,4 @@
-exports.defaultPagetitle = 'Sobre Livros'
+exports.defaultPagetitle = 'Posts'
 
 exports.menu = [
   { name: 'Home', slug: '/', guest: true, logged: true },

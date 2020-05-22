@@ -40,3 +40,7 @@ exports.logout = (request, response) => {
   request.logout()
   response.redirect('/')
 }
+
+exports.profile = (request, response) => {
+  response.render('profile')
+}

@@ -15,18 +15,27 @@
 </head>
 <body>
 <header>
-<h1>Livros</h1>
-{{#user}}
-  Olá, {{user.name}}!
-{{/user}}
-<hr/>
-<ul>
-
-{{#h.menu}}
-<li><a href="{{slug}}">{{name}}</a></li>
-{{/h.menu}}
-
-</ul>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Assuntos</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    {{#h.menu}}
+      <li class="nav-item">
+        <a class="nav-link" href="{{slug}}">{{name}}</a>
+      </li>
+    {{/h.menu}}
+    </ul>
+    <div class="my-2 my-lg-0">
+      {{#user}}
+        <h4>Seja bem Vindo!</h4><br>
+        <a href="/profile">{{user.name}}</a>
+      {{/user}}
+    </div>
+  </div>
+</nav>
 </header>
 
 {{#flashes}}
