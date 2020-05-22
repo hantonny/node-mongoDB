@@ -12,6 +12,7 @@ exports.add = (requeste, response) => {
 }
 exports.addAction = async (request, response) => {
   request.body.tags = request.body.tags.split(',').map(t => t.trim())
+  request.body.author = request.user._id
   const post = new Post(request.body)
 
   try {
