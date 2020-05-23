@@ -1,0 +1,13 @@
+{{> header}}
+<h2>Se você esqueceu sua senha?</h2>
+<h4> Você receberá um email automático contendo com as instruções para redefinir a senha.</h4>
+<form method="POST">
+  <label>
+  Email:
+  <input type='email' name='email'>
+  </labeL><br>
+  <label>
+  <button type='submit' class="btn btn-success botao"><p>REDEFINIR SENHA</p></button>
+ </labeL><br>
+</form>
+</div>

@@ -1,9 +1,9 @@
 {{> header}}
-
-<div>
 <h1>Meu perfil</h1>
+<div class="profile">
 
 <form method="POST">
+  <h3>Nome e Email</h3>
   <label>
     Nome Completo: 
     <input type="text" name="name" value="{{user.name}}"/>
@@ -12,6 +12,24 @@
     <label>
     Email: 
     <input type="text" name="email" value="{{user.email}}"/>
+  </label>
+  <br/>
+  <label>
+    <button type='submit' class="btn btn-success">SALVAR</button>
+  </label>
+</form>
+<hr>
+<form method="POST" action="/profile/password">
+  <h3>Mudança de Senha</h3>
+  <label>
+    Nova Senha: 
+    <input type="password" name="password"/>
+  </label>
+  <br/>
+
+ <label>
+    Confirmar Nova Senha: 
+    <input type="password" name="password-confirm"/>
   </label>
   <br/>
   <label>

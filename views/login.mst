@@ -2,7 +2,6 @@
 <h2>Faça o seu Login</h2>
 
 <form method="POST">
-
   <label>
   Email: 
   <input type='email' name='email'>
@@ -12,7 +11,8 @@
   <input type='password' name='password'>
  </labeL><br>
   <label>
-  <button type='submit' class="btn btn-success">ENTRAR</button>
+  <button type='submit' class="btn btn-success botao"><p>ENTRAR</p></button>
  </labeL><br>
-
+ <a href="/users/forget">Esqueci minha senha</a>
 </form>
+</div>

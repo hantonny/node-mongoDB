@@ -22,6 +22,7 @@
   </label>
   <br/>
   <label>
-    <button type='submit' class="btn btn-success">ADICIONAR</button>
+    <button type='submit' class="btn btn-success botao"><p>ADICIONAR</p></button>
   </label>
 </form>
+</div>

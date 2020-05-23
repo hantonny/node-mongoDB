@@ -2,7 +2,8 @@
 
 <div class='tags'>
   {{#tags}}
-  <div class='tag {{class}}'><a href='/?t={{_id}}'>{{_id}}({{count}})</a></div>
+  <div class='tag {{class}}'><a href='/?t={{_id}}'>{{_id}}</a></div>
+  <!--<div class='tag {{class}}'><a href='/?t={{_id}}'>{{_id}}({{count}})</a></div>-->
   {{/tags}}
 </div>
 
@@ -15,8 +16,8 @@
   <p>Autor: {{author.name}}</p>
   <p class="corpo">{{body}}</p>
   {{#user}}
-  <a href="/post/{{slug}}/edit" class="btn btn-primary">EDITAR</a>
+  <a href="/post/{{slug}}/edit" class="btn btn-primary botao">EDITAR</a>
   {{/user}}
   </div>
-  
 {{/posts}}
+</div>

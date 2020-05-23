@@ -12,7 +12,7 @@ header h4{
 header h1 {
 text-align:center;
 }
-h2{
+h1, h2, h4{
   text-align: center;
   padding-top: 20px;
 }
@@ -55,12 +55,16 @@ width:100%;
 max-width: 300px;
 display:inline-block;
 box-shadow:0px 0px 5px #999;
+background-color: #EFEFEF;
 padding:10px;
-margin-top: 0px;
-margin-left: 120px;
+margin-bottom: 15px;
+margin-left: 30px;
+margin-right: 30px;
 border-radius:5px;
 overflow:hidden;
 text-overflow: ellipsis;
+font-weight: 700;
+font-size: 16px;
 }
 .post h3 {
   margin-top: 10px;
@@ -85,6 +89,8 @@ margin:20px;
 label {
 display:inline-block;
 margin:5px 0;
+font-size: 20px;
+font-weight: bold;
 }
 input, textarea {
 display:block;
@@ -116,10 +122,14 @@ padding:10px;
 color:#FF0000;
 }
 .view{
+  background-color: #EEE;
   margin: auto;
-  width: 800px;
-  margin-top: 50px;
+  width: 100%;
+  padding: 30px;
+  margin-top: 10px;
+  margin-bottom: 50px;
   word-wrap: break-word;
+  border-radius: 40px;
 }
 .view h1{
   text-align: center;
@@ -127,4 +137,48 @@ color:#FF0000;
 }
 .view article{
   text-align: justify;
+  font-family: 'Merriweather', serif;
+  font-size: 22px;
+  line-height: 35px;
+}
+.view article:first-letter{
+  font-size: 45px;
+  margin-left: 50px;
+}
+.view small{
+  font-size: 22px;
+}
+.profile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  text-align: center;
+}
+.profile hr{
+  display: none;
+}
+.botao p{
+  height: 5px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .profile{
+    display: block;
+  }
+  .profile hr{
+    display: block;
+  }
+  .user-profile{
+    text-align: center;
+  }
+  .user-profile h4{
+    margin-bottom: 5px;
+  }
+  .post {
+    margin-top: 10px;
+    margin-left: 90px;
+  }
 }
